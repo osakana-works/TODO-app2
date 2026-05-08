@@ -1,0 +1,75 @@
+.success-message {
+    background-color: #badbcc;
+    color: #0f5132;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.error-messages {
+    background-color: #f5c2c7;
+    color: #842029;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.update-btn {
+    background-color: #0000ff;
+}
+
+.update-btn:hover {
+    opacity: 0.8;
+}
+
+.delete-btn {
+    background-color: #ff0000;
+}
+
+.delete-btn:hover {
+    opacity: 0.8;
+}
+
+.container {
+    margin-top: 24px;
+}
+
+table td,
+table th {
+    padding: 2px 16px 2px 16px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.action-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.action-cell form {
+    margin: 0;
+}

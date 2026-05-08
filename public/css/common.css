@@ -1,0 +1,35 @@
+.header {
+    background-color: #000000;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__inner a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+.header__inner a:hover {
+    opacity: 0.7;
+}
+
+.footer {
+    background-color: #000000;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #000000;
+    margin-top: 2rem;
+}
+
+.footer p {
+    color: #fff;
+    margin: 0;
+}
