@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +26,7 @@ Route::PATCH('/categories/update', [CategoryController::class, 'update']);
 Route::DELETE('/categories/delete', [CategoryController::class, 'destroy']);
 
 Route::get('/todos/search', [TodoController::class, 'search']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});
