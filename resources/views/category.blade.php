@@ -23,7 +23,7 @@
             </div>
         @endif
 
-        <form action="/categories" method="POST">
+        <form class="submit-form" action="/categories" method="POST">
             @csrf
             <input type="text" name="name" placeholder="Enter category name" required>
             <button class="btn" type="submit">作成</button>
@@ -33,14 +33,13 @@
             <thead>
                 <tr>
                     <th>カテゴリ名</th>
-                    <th></th>
                 </tr>
             </thead>
 
             <tbody>
                 @foreach($categories as $category)
                     <tr>
-                        <td>
+                        <td class="action-cell">
                             <form action="/categories/update" method="POST" class="action-cell">
                                 @csrf
                                 @method('PATCH')
@@ -48,9 +47,7 @@
                                 <input type="hidden" name="id" value="{{ $category->id }}">
                                 <button class="btn update-btn" type="submit">更新</button>
                             </form>
-                        </td>
 
-                        <td class="action-cell">
                             <form action="/categories/delete" method="POST">
                                 @csrf
                                 @method('DELETE')
