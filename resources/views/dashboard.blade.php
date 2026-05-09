@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>ダッシュボード</title>
-    <style>
-        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
-        .card { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .logout-btn { background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
-        .todolist-btn { background: #355cdc; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
-    </style>
-</head>
+@extends('layouts.app')
+
+@section('title', 'ダッシュボード')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+@endsection
+
+@section('content')
 <body>
     <h1>ダッシュボード</h1>
     
@@ -19,7 +16,7 @@
         <p>登録日: {{ $user->created_at->format('Y年m月d日') }}</p>
     </div>
 
-    <div style="display: flex; gap: 10px;">
+    <div class="btn-container">
         <button onclick="window.location.href='/'" class="todolist-btn">TODOリストへ</button>
 
         <form method="POST" action="{{ route('logout') }}">
@@ -28,4 +25,4 @@
         </form>
     </div>
 </body>
-</html>
+@endsection

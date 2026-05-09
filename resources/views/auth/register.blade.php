@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>ユーザー登録</title>
-    <style>
-        body { font-family: sans-serif; max-width: 400px; margin: 50px auto; padding: 20px; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background: #3490dc; color: white; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #2779bd; }
-        .error { color: red; font-size: 12px; margin-top: 5px; }
-        .link { text-align: center; margin-top: 15px; }
-    </style>
-</head>
+@extends('layouts.app')
+
+@section('title', 'ユーザー登録')
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+@endsection
+
+@section('content')
 <body>
     <h1>ユーザー登録</h1>
     
@@ -57,3 +49,4 @@
     </p>
 </body>
 </html>
+@endsection
