@@ -7,33 +7,35 @@
 
 @section('content')
 <body>
-    <h1>ログイン</h1>
-    
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <div class="container">
+        <h1>ログイン</h1>
         
-        <div class="form-group">
-            <label for="email">メールアドレス</label>
-            <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus>
-            @error('email')
-                <p class="error">{{ $message }}</p>
-            @enderror
-        </div>
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            
+            <div class="form-group">
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus>
+                @error('email')
+                    <p class="error">{{ $message }}</p>
+                @enderror
+            </div>
+            
+            <div class="form-group">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" name="password" required>
+                @error('password')
+                    <p class="error">{{ $message }}</p>
+                @enderror
+            </div>
+            
+            <button type="submit">ログイン</button>
+        </form>
         
-        <div class="form-group">
-            <label for="password">パスワード</label>
-            <input type="password" id="password" name="password" required>
-            @error('password')
-                <p class="error">{{ $message }}</p>
-            @enderror
-        </div>
-        
-        <button type="submit">ログイン</button>
-    </form>
-    
-    <p class="link">
-        <a href="{{ route('register') }}">アカウントをお持ちでない方はこちら</a>
-    </p>
+        <p class="link">
+            <a href="{{ route('register') }}">アカウントをお持ちでない方はこちら</a>
+        </p>
+    </div>
 </body>
 @endsection
 

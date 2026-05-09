@@ -1,6 +1,5 @@
 body {
     font-family: sans-serif;
-    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
 }
@@ -34,4 +33,10 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 0 20px;
 }

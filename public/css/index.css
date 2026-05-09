@@ -73,3 +73,9 @@ table tr {
 .action-cell form {
     margin: 0;
 }
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
