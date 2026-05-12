@@ -38,7 +38,7 @@
     DB_PASSWORD=password
     ```
 
-4. Sail をインストール（重要）
+4. Sail をインストール
 
     ```bash
     composer require laravel/sail --dev
