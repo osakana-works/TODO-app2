@@ -23,7 +23,6 @@ class CategoryRequest extends FormRequest
     {
         return [
             'name' => 'required|max:10|string|unique:categories,name,' . $this->input('id'),
-            'id' => 'required|integer|exists:categories,id',
         ];
     }
 
