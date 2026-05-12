@@ -21,10 +21,15 @@ class TodoRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'content' => 'required|max:20|string',
-            'category_id' => 'required|exists:categories,id',
         ];
+
+        if ($this->routeIs('todos.store')) {
+            $rules['category_id'] = 'required|exists:categories,id';
+        }
+
+        return $rules;
     }
 
     public function messages(): array

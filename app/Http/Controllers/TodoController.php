@@ -30,14 +30,14 @@ class TodoController extends Controller
     }
 
     public function update(TodoRequest $request)
-    {   
+    {  
         $validated = $request->validated();
-        
+
         $id= $request->input('id');
         $todo = Todo::find($id);
         $todo->update([
             'content' => $validated['content'],
-            'category_id' => $validated['category_id']
+            'category_id' => $todo->category_id, 
         ]);
 
         return redirect('/')->with('message', 'Todoを更新しました。');
