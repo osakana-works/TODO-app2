@@ -19,7 +19,6 @@ class TodoController extends Controller
     public function store(TodoRequest $request)
     {   
         $validated = $request->validated();
-
         Todo::create(
             [
                 'content' => $validated['content'],
@@ -31,7 +30,7 @@ class TodoController extends Controller
     }
 
     public function update(TodoRequest $request)
-    {
+    {   
         $validated = $request->validated();
         
         $id= $request->input('id');
