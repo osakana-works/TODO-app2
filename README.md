@@ -13,6 +13,7 @@
 | Docker | 最新 |
 
 ## 導入手順（GitHub から clone する場合）
+
 1. リポジトリを clone
 
     ```bash
@@ -28,7 +29,7 @@
 
 3. .env の DB 設定を Sail 用に修正
 
-    ```bash
+    ```env
     DB_CONNECTION=mysql
     DB_HOST=mysql
     DB_PORT=3306
@@ -37,32 +38,36 @@
     DB_PASSWORD=password
     ```
 
-4. Sail を起動
+4. Sail をインストール（重要）
+
+    ```bash
+    composer require laravel/sail --dev
+    php artisan sail:install --with=mysql
+    ```
+
+5. Sail を起動
 
     ```bash
     ./vendor/bin/sail up -d
     ```
 
-5. アプリキー生成
+6. アプリキー生成
 
     ```bash
     ./vendor/bin/sail artisan key:generate
     ```
 
-6. マイグレーション & 初期データ投入
+7. マイグレーション & 初期データ投入
 
     ```bash
     ./vendor/bin/sail artisan migrate --seed
     ```
 
-7. ブラウザでアクセス
-
-
-    ```bash
-    http://localhost
+8. ブラウザでアクセス
 
     ```
-
+    http://localhost
+    ```
 
 
 ## 環境構築
